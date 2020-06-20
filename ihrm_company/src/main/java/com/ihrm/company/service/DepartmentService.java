@@ -5,6 +5,7 @@ import com.ihrm.common.utils.IdWorker;
 import com.ihrm.company.dao.DepartmentDao;
 import com.ihrm.domain.company.Department;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +15,8 @@ import java.util.List;
  * @date 2020/4/25 - 15:04
  **/
 @Service
-public class DepartmentService extends BaseService {
+public class DepartmentService extends BaseService<Department> {
+
     @Autowired
     private DepartmentDao departmentDao;
 
@@ -26,7 +28,7 @@ public class DepartmentService extends BaseService {
      */
     public void save(Department department) {
         //设置主键的值
-        String id = idWorker.nextId() + "";
+        String id = idWorker.nextId()+"";
         department.setId(id);
         //调用dao保存部门
         departmentDao.save(department);

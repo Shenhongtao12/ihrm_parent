@@ -7,12 +7,23 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 /**
- * 分页对象
+ * 分页
+ *      {
+ *          “success”：“成功”，
+ *          “code”：10000
+ *          “message”：“ok”，
+ *          ”data“：{
+ *              total：//总条数
+ *              rows ：//数据列表
+ *          }
+ *      }
+ *
+ *
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class PageResult<T> {
-    private Long total; //总条数
-    private List<T> rows; //数据列表
+    private Long total;
+    private List<T> rows;
 }

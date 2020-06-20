@@ -10,14 +10,13 @@ import com.ihrm.system.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Map;
 
 @RestController
 @RequestMapping("/sys")
 public class RoleController extends BaseController{
-
+    
     @Autowired
     private RoleService roleService;
 
@@ -25,7 +24,7 @@ public class RoleController extends BaseController{
      * 分配权限
      */
     @RequestMapping(value = "/role/assignPrem", method = RequestMethod.PUT)
-    public Result save(@RequestBody Map<String,Object> map) {
+    public Result assignPrem(@RequestBody Map<String,Object> map) {
         //1.获取被分配的角色的id
         String roleId = (String) map.get("id");
         //2.获取到权限的id列表

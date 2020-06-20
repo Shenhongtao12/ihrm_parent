@@ -7,10 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ihrm_common_model" />
-        <module name="ihrm_company" />
-        <module name="ihrm_common" />
+        <module name="test" />
         <module name="ihrm_system" />
+        <module name="ihrm_eureka2" />
+        <module name="ihrm_company" />
+        <module name="ihrm_employee" />
+        <module name="ihrm_common_model" />
+        <module name="ihrm_common" />
       </profile>
     </annotationProcessing>
   </component>
@@ -19,6 +22,9 @@
       <module name="ihrm_common" options="-parameters" />
       <module name="ihrm_common_model" options="-parameters" />
       <module name="ihrm_company" options="-parameters" />
+      <module name="ihrm_employee" options="-parameters" />
+      <module name="ihrm_eureka2" options="-parameters" />
+      <module name="ihrm_parent" options="" />
       <module name="ihrm_system" options="-parameters" />
     </option>
   </component>
