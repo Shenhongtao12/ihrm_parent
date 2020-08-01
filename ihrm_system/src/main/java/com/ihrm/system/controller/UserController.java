@@ -92,7 +92,7 @@ public class UserController extends BaseController {
         return new Result(ResultCode.SUCCESS);
     }
 
-    public static Object getCellValue(Cell cell) {
+    public Object getCellValue(Cell cell) {
         //1.获取到单元格的属性类型
         CellType cellType = cell.getCellType();
         //2.根据单元格数据类型获取数据

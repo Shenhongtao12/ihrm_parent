@@ -227,7 +227,7 @@ public class EmployeeController extends BaseController {
         //标题
         String [] titles = "编号,姓名,手机,最高学历,国家地区,护照号,籍贯,生日,属相,入职时间,离职类型,离职原因,离职时间".split(",");
         //处理标题
-
+        //创建行对象，从0开始
         Row row = sheet.createRow(0);
 
         int titleIndex=0;
@@ -237,6 +237,7 @@ public class EmployeeController extends BaseController {
         }
 
         int rowIndex = 1;
+        //创建单元格，从0开始
         Cell cell=null;
         for(int i=0;i<10000;i++){
         for (EmployeeReportResult employeeReportResult : list) {
